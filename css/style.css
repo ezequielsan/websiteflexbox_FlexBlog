@@ -89,6 +89,7 @@ img {
 
 }
 
+
 /* Introdução */
 .introducao {
     font-size: 3em;
@@ -118,6 +119,7 @@ img {
     font-size: 3em;
     margin-bottom: .5em;
 }
+
 
 .sobre-info p {
     font-size: 1.25em;
@@ -189,7 +191,7 @@ img {
 
 .preco-item {
     flex: 1 1 260px;
-    border: 4px solid white;
+    border: 4px solid #e0e0e0;
     padding: 20px;
     margin: 10px;
 
@@ -253,6 +255,14 @@ img {
     font-weight: bold;
     font-size: 2.25em;
     text-align: center;
+    transition: 0.25s;
+
+}
+
+.preco-item a:hover {
+    color: #f7f7f7;
+    background-color: #222222;
+    border: 4px solid #222222;
 
 }
 
@@ -262,6 +272,10 @@ img {
         padding-right: 10px;
     }
 
+    .preco-item {
+        margin: 50px;
+    }
+
     .preco .preco:nth-child(3) {
         order: -2;
 
@@ -269,6 +283,229 @@ img {
 
     .preco .preco:nth-child(2) {
         order: -1;
+
+    }
+
+    .preco-item h2,
+    .preco-item span {
+        font-size: 2.5em;
+
+    }
+
+    .preco-item sup {
+        font-size: 1.2rem;
+    }
+
+    .preco-item a {
+        font-size: 2em;
+    }
+
+}
+
+/* Qualidade */
+.qualidade {
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.qualidade-item {
+    flex: 1 1 280px;
+    margin: 20px 20px 15px 0px;
+}
+
+.qualidade-item:nth-of-type(3n + 3) {
+    margin-right: 0px;
+
+}
+
+.qualidade-item h2 {
+    font-size: 2.5em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: blue;
+
+}
+
+.qualidade-item:nth-of-type(3n + 1) h2::before {
+    background-color: #ae81ff;
+
+}
+
+.qualidade-item:nth-of-type(3n + 2) h2::before {
+    background-color: #f9265e;
+
+}
+
+.qualidade-item:nth-of-type(3n + 3) h2::before {
+    background-color: #66d9eb;
+
+}
+
+.qualidade-item p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #7c7c7c;
+    text-align: justify;
+
+}
+
+/* Newslatter */
+
+.newslatter {
+    background-color: #f7f7f7;
+    padding: 60px calc((100% - 960px) / 2);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newslatter-info {
+    flex: 1 1 240px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.newslatter-info h1 {
+    font-size: 3em;
+    color: #a4a4a4;
+}
+
+.newslatter-info p {
+    font-size: 1.15em;
+    font-style: italic;
+    max-width: 230px;
+    color: #7c7c7c;
+    margin-bottom: 10px;
+
+}
+
+.newslatter-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2 1 260px;
+    margin: 0 10px;
+    align-self: center;
+}
+
+.newslatter-form input {
+    flex: 3 1 200px;
+    font-size: 1.25em;
+    color: #7c7c7c;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    border: 4px solid #2c70ff;
+    background-color: transparent;
+    padding: 15px 10px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.newslatter-form button {
+    flex: 1 1 260px;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    font-size: 2.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #2c70ff;
+    color: white;
+    margin: 0px;
+    cursor: pointer;
+    border: none;
+    padding: 15px 10px;
+}
+
+@media (max-width: 965px) {
+    .newslatter-form button {
+        font-size: 1.5em;
+    }
+
+}
+
+.footer {
+    display: flex;
+    background-color: #2c70ff;
+    height: 200px;
+    align-items: center;
+
+}
+
+.footer p {
+    flex: 1;
+    text-align: center;
+    font-size: 2.25em;
+    color: #122ab2;
+}
+
+@media (max-width: 630px) {
+
+    .superinfo {
+        justify-content: center;
+        padding-top: 5px;
+    }
+
+    .superinfo a,
+    .superinfo p {
+        margin: 0px 10px 5px 10px;
+
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .introducao,
+    .sobre-info h1,
+    .produtos h1,
+    .newslatter-info h1 {
+        font-size: 2em;
+
+    }
+
+    .purple h2,
+    .pink h2 {
+        font-size: 2.25em;
+        text-align: center;
+    }
+
+    .blue h2 {
+        text-align: center;
+
+    }
+
+    .qualidade-item h2 {
+        font-size: 2em;
+    }
+
+    .newslatter-info {
+        align-items: center;
+
+    }
+
+    .newslatter-info p {
+        text-align: center;
+    }
+
+    .footer {
+        height: 100px;
+        align-items: center;
+    }
+
+    .footer p {
+        font-size: 1.25em;
+        height: 100px;
+        text-align: center;
+        padding-top: 25px;
 
     }
 
